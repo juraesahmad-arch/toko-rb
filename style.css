@@ -1,0 +1,538 @@
+:root {
+    --bg-color: #0b1f14;      /* Hijau tua elegan utama */
+    --card-bg: #112d1d;        /* Hijau tua sedikit lebih terang untuk card */
+    --text-color: #f1f1f1;
+    --accent-color: #2e8b57;
+    --secondary-color: #3cb371;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+.phone-contact {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* HERO / HEADER SECTION */
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    /* 
+      PERUBAHAN DISINI: 
+      - 'center center' membuat background di tengah.
+      - 'contain' atau ukuran spesifik (misal: '80% auto') membuat gambarnya mengecil/tidak memenuhi seluruh layar penuh secara mentah. 
+      Di sini digunakan ukuran persentase/contain dengan latar belakang warna gelap penyeimbang.
+    */
+    background: linear-gradient(rgba(11, 31, 20, 0.75), rgba(11, 31, 20, 0.9)), 
+                url('WhatsApp Image 2026-09-21 at 21.07.08.jpeg') no-repeat center center;
+    background-size: 100% auto; /* Mengatur gambar agar mengecil dan tetap di tengah */
+}
+
+.nomor-hp{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content {
+    text-align: left; /* Memastikan isi teks berada di samping kiri */
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #a0aec0;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.hero-btn.primary {
+    background-color: #fff;
+    color: #0b1f14;
+}
+
+.hero-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #183d28;
+    text-align: left; /* Memastikan teks about di samping kiri */
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cbd5e0;
+    margin-bottom: 40px;
+}
+
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.vm-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #1f4e34;
+}
+
+.vm-card h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.vm-card ul {
+    padding-left: 20px;
+    color: #cbd5e0;
+    margin: 0;
+}
+
+.vm-card li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* KATALOG PRODUK */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 60px 0 30px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1f4e34;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 20px;
+    color: #fff;
+    flex-grow: 1;
+}
+
+.product-footer {
+    padding: 0 20px 20px 20px;
+}
+
+.btn-detail {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-detail:hover {
+    background: #fff;
+    color: #0b1f14;
+}
+
+/* MODAL STYLING */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(5, 15, 10, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #112d1d;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #1f4e34;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover { color: #fff; }
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media(max-width: 768px) {
+    .modal-body { grid-template-columns: 1fr; }
+    .header { 
+        padding: 0 20px; 
+        background-size: 100% auto; /* Menyesuaikan ukuran di mobile */
+    }
+    .hero-content h1 { font-size: 40px; }
+    .navbar { padding: 15px 20px; }
+}
+
+.product-gallery .main-image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 1px solid #1f4e34;
+}
+
+.thumbnail-container img:hover { opacity: 1; }
+
+.modal-info h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.variant-section label {
+    display: block;
+    margin: 15px 0 5px 0;
+    color: #cbd5e0;
+    font-size: 14px;
+}
+
+.color-options, .variant-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-btn, .variant-btn {
+    padding: 8px 16px;
+    background: #183d28;
+    border: 1px solid #235c3c;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.color-btn.active, .variant-btn.active {
+    background: #fff;
+    color: #0b1f14;
+    border-color: #fff;
+    font-weight: bold;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #1f4e34;
+    background: #0b1f14;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.spec-card {
+    background: #0b1f14;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: 1px solid #183d28;
+    font-size: 13px;
+    color: #cbd5e0;
+}
+
+.spec-card h4 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.modal-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.btn-buy {
+    display: block;
+    text-align: center;
+    background: #25d366;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover { background: #20ba5a; }
+
+/* FOOTER */
+.footer {
+    background: #07140d;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #183d28;
+    color: #a0aec0;
+}
+
+.footer h4 { color: #fff; margin-bottom: 10px; }
+
+/* --- TAMBAHAN ANIMASI SCROLL --- */
+
+/* 1. Membuat perpindahan antar menu/link menjadi smooth (halus) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Style awal untuk elemen yang akan diberi animasi saat di-scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 3. Class aktif yang akan dipasang oleh JavaScript saat elemen terlihat di layar */
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- TAMBAHAN ANIMASI SCROLL BERULANG --- */
+.about-section, .products-grid, .hero-content, .section-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-section.visible, .products-grid.visible, .hero-content.visible, .section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+    /* --- CSS TAMBAHAN AGAR TAMPILAN DI HP LEBIH RAPI --- */
+    @media screen and (max-width: 768px) {
+        /* Mengatur agar modal pas di layar HP dan bisa di-scroll dengan nyaman */
+        .modal-content {
+            width: 95% !important;
+            max-height: 90vh !important;
+            margin: auto !important;
+            overflow-y: auto !important;
+            padding: 15px !important;
+        }
+
+        /* Mengatur tata letak bagian dalam modal menjadi satu kolom ke bawah */
+        .modal-body {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+
+        /* Memperkecil dan merapikan thumbnail gambar */
+        .thumbnail-container {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            overflow-x: auto !important;
+            padding-bottom: 5px !important;
+        }
+
+        .thumbnail-container img {
+            width: 50px !important;
+            height: 50px !important;
+            object-fit: cover !important;
+            border-radius: 6px !important;
+        }
+
+        /* Mempercantik tombol Beli via WhatsApp agar tidak terpotong */
+        .btn-buy {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+            padding: 12px !important;
+            font-size: 16px !important;
+            box-sizing: border-box !important;
+            margin-bottom: 10px !important;
+        }
+
+        /* Menyesuaikan ukuran tombol pilihan warna dan ukuran agar mudah ditekan jari */
+        .color-btn, .variant-btn {
+            padding: 8px 12px !important;
+            font-size: 14px !important;
+        }
+    }
